@@ -1,0 +1,11 @@
+@import 'src/assets/styles/variables';
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	> button {
+		background: none;
+		border: none;
+		color: $white;
+	}
+}
