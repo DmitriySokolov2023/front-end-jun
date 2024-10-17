@@ -30,7 +30,8 @@
 	.menu {
 		position: absolute;
 		top: calc(100% + 8px);
-		right: 0;
+		right: 5px;
+
 		background-color: #fff;
 		padding: 10px 12px;
 		font-size: 14px;
@@ -46,7 +47,9 @@
 
 		> ul {
 			list-style: none;
-			color: #000;
+			li {
+				color: #000;
+			}
 			a {
 				color: #000;
 				text-decoration: none;

@@ -1,13 +1,16 @@
-import clsx from 'clsx'
+import cn from 'clsx'
 import { Link } from 'react-router-dom'
 import styles from './Hamburger.module.scss'
 import { menu } from './menu.data'
 
 const Menu = ({ isVisible }) => {
 	const logoutHandler = () => {}
-
 	return (
-		<nav className={clsx(styles.menu, { [styles.show]: isVisible })}>
+		<nav
+			className={cn(styles.menu, {
+				[styles.show]: isVisible
+			})}
+		>
 			<ul>
 				{menu.map((item, index) => (
 					<li key={`_menu_${index}`}>
@@ -21,4 +24,5 @@ const Menu = ({ isVisible }) => {
 		</nav>
 	)
 }
+
 export default Menu
