@@ -7,6 +7,7 @@ const Layout = ({ children, bgImage, heading = '', backLink = '/' }) => {
 			className={cn(styles.wrapper, {
 				[styles.otherPage]: !!heading
 			})}
+			style={{ backgroundImage: `url(${bgImage})` }}
 		>
 			<Header backLink={backLink} />
 			{heading && <div className={styles.heading}>{heading}</div>}

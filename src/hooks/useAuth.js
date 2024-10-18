@@ -1,5 +1,5 @@
-export const useAuth = () => {
+export const useAuth = status => {
 	return {
-		isAuth: false
+		isAuth: status
 	}
 }

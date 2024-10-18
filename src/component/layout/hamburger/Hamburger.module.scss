@@ -22,8 +22,11 @@
 	> button {
 		font-size: 30px;
 
-		> svg > path {
-			fill: #fff;
+		> svg {
+			animation: opacity 0.4s;
+			> path {
+				fill: #fff;
+			}
 		}
 	}
 
@@ -34,7 +37,7 @@
 
 		background-color: #fff;
 		padding: 10px 12px;
-		font-size: 14px;
+		font-size: 18px;
 		box-shadow: $bx-16;
 		border-radius: 10px 0 10px 10px;
 		min-width: 116px;

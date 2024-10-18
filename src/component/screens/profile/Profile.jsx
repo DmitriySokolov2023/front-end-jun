@@ -1,4 +1,6 @@
+import Layout from '../../layout/Layout'
+
 const Profile = () => {
-	return <div>Profile</div>
+	return <Layout heading='profile'>Dmitriy, 21</Layout>
 }
 export default Profile
