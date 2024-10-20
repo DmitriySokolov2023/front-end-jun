@@ -16,12 +16,14 @@ const Header = ({ backLink }) => {
 					<FiArrowLeft size={30} />
 				</button>
 			) : (
-				<button onClick={() => <Link to={navigate('/profile')} />}>
+				<button
+					onClick={() => <Link to={navigate(isAuth ? '/profile' : '/auth')} />}
+				>
 					<MdSportsGymnastics size={30} />
 				</button>
 			)}
 
-			<Hamburger />
+			{isAuth && <Hamburger />}
 		</header>
 	)
 }

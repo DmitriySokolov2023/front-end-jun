@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../hooks/useAuth'
 import Layout from '../../layout/Layout'
 import Button from '../../UI/button/Button'
+import Statistics from '../../UI/statistics/Statistics'
 import styles from './Home.module.scss'
 
 function Home() {
@@ -18,21 +19,7 @@ function Home() {
 					</Button>
 					<h1>EXERCISES FOR THE SHOULDERS</h1>
 				</div>
-
-				<div className={styles.home__statistic}>
-					<div>
-						<p>Minutes</p>
-						<p>20</p>
-					</div>
-					<div>
-						<p>Level</p>
-						<p>Hard</p>
-					</div>
-					<div>
-						<p>Up</p>
-						<p>5%</p>
-					</div>
-				</div>
+				<Statistics />
 			</div>
 		</Layout>
 	)

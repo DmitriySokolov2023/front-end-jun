@@ -1,0 +1,7 @@
+.statistics {
+	display: flex;
+	justify-content: space-between;
+	> div > p:first-child {
+		color: #ffffff72;
+	}
+}
