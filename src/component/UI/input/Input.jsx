@@ -1,19 +1,16 @@
 import styles from './Input.module.scss'
-
-const Input = ({
-	placeholder = 'text',
-	type = 'text',
-	onChange,
-	value = ''
-}) => {
+const Input = ({ placeholder, type, register, name, options, error }) => {
 	return (
-		<input
-			className={styles.input}
-			placeholder={placeholder}
-			value={value}
-			type={type}
-			onChange={e => onChange(e)}
-		/>
+		<div>
+			<input
+				placeholder={placeholder}
+				type={type}
+				className={styles.input}
+				{...register(name, options)}
+			/>
+
+			{error && <div className={styles.error}>{error}</div>}
+		</div>
 	)
 }
 export default Input

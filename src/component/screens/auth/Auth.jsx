@@ -1,38 +1,37 @@
 import { useState } from 'react'
+import { useForm } from 'react-hook-form'
 import Layout from '../../layout/Layout'
-import Form from '../../UI/form/Form'
+import Button from '../../UI/button/Button'
 import Input from '../../UI/input/Input'
 
 const Auth = () => {
 	const [type, setType] = useState('login')
 
-	const [email, setEmail] = useState('')
+	const {
+		register,
+		handleSubmit,
+		formState: { errors }
+	} = useForm({
+		mode: 'onChange'
+	})
 
-	// const { mutate, isLoading } = useMutation(
-	// 	['auth'],
-	// 	() => authService.main(type),
-	// 	{
-	// 		onSuccess: data => {
-	// 			alert('success')
-	// 		}
-	// 	}
-	// )
-
-	const handleChange = e => {
-		setEmail(e.target.value)
+	const onSubmit = data => {
+		console.log(data)
 	}
 	return (
 		<Layout heading='Sign in' bgImage={'/images/auth-bg.png'}>
 			<div className='wrapper-inner-page'>
-				<Form>
+				<form onSubmit={handleSubmit(onSubmit)}>
 					<Input
-						placeholder={'email'}
+						error={errors?.email?.message}
+						placeholder={'Enter email'}
 						type={'email'}
-						onChange={handleChange}
-						value={email}
+						register={register}
+						name={'email'}
+						options={{ required: 'Email is required' }}
 					/>
-				</Form>
-				<div>{email}</div>
+					<Button>Lets go</Button>
+				</form>
 			</div>
 		</Layout>
 	)
