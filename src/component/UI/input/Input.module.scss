@@ -10,13 +10,14 @@
 	margin-bottom: 0.7rem;
 	outline: none;
 	width: 100%;
+	color: #986586;
 
 	&:focus {
 		border-color: rgba($accent, 0.3);
 	}
 
 	&::placeholder {
-		color: #946e86;
+		color: #946e8645;
 	}
 }
 
