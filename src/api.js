@@ -5,6 +5,6 @@ export const $axios = axios.create({
 	baseURL: 'http://localhost:5000/api',
 	headers: {
 		'Content-Type': 'application/json',
-		Authorization: `Bearer ${Cookie.get('token')}`
+		Authorization: Cookie.get('token') ? `Bearer ${Cookie.get('token')}` : ''
 	}
 })
