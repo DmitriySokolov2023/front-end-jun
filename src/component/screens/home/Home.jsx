@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../../hooks/useAuth'
 import Layout from '../../layout/Layout'
 import Button from '../../UI/button/Button'
 import Statistics from '../../UI/statistics/Statistics'
 import styles from './Home.module.scss'
 
 function Home() {
-	const isAuth = false
+	const { isAuth, setIsAuth } = useAuth()
 	const navigation = useNavigate()
 	return (
 		<Layout bgImage='/images/home-bg.jpg'>

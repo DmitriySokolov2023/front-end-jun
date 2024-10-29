@@ -6,7 +6,7 @@ export const routes = [
 	{
 		path: '/',
 		component: Home,
-		auth: false
+		auth: true
 	},
 	{
 		path: '/auth',
@@ -21,7 +21,7 @@ export const routes = [
 	{
 		path: '/profile',
 		component: Profile,
-		auth: false
+		auth: true
 	}
 	/*{
 		path: '/new-exercise',

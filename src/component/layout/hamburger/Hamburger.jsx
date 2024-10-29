@@ -16,7 +16,7 @@ const Hamburger = () => {
 			<button onClick={() => setVisible(!isVisible)}>
 				{isVisible ? <IoClose /> : <CgMenuRight />}
 			</button>
-			<Menu isVisible={isVisible} />
+			<Menu isVisible={isVisible} setIsShow={setVisible} />
 		</div>
 	)
 }

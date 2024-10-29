@@ -9,6 +9,8 @@ const Header = ({ backLink }) => {
 	const { isAuth } = useAuth()
 	const { pathname } = useLocation()
 	const navigate = useNavigate()
+
+	if (!isAuth) return null
 	return (
 		<header className={styles.header}>
 			{pathname !== '/' ? (
@@ -16,9 +18,7 @@ const Header = ({ backLink }) => {
 					<FiArrowLeft size={30} />
 				</button>
 			) : (
-				<button
-					onClick={() => <Link to={navigate(isAuth ? '/profile' : '/auth')} />}
-				>
+				<button onClick={() => <Link to={navigate('/profile')} />}>
 					<MdSportsGymnastics size={30} />
 				</button>
 			)}
