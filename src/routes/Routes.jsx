@@ -4,7 +4,6 @@ import { useAuth } from '../hooks/useAuth'
 import { routes } from './routes.data'
 const Router = () => {
 	const { isAuth } = useAuth()
-	console.log(isAuth)
 	return (
 		<BrowserRouter>
 			<Routes>

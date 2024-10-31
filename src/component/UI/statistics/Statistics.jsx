@@ -1,6 +1,13 @@
+import { useQuery } from '@tanstack/react-query'
+import userService from '../../../services/user.service'
 import styles from './Statistics.module.scss'
 
 const Statistics = () => {
+	const profile = useQuery({
+		queryKey: ['profile'],
+		queryFn: userService.getProfile()
+	})
+	console.log(profile)
 	return (
 		<div className={styles.statistics}>
 			<div>
