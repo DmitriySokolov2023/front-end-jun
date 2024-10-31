@@ -1,10 +1,8 @@
 import cn from 'clsx'
-import { useAuth } from '../../hooks/useAuth'
 import { useCheckToken } from '../../hooks/useCheckToken'
 import Header from './header/Header'
 import styles from './Layout.module.scss'
 const Layout = ({ children, bgImage, heading = '', backLink = '/' }) => {
-	const isAuth = useAuth()
 	useCheckToken()
 
 	return (

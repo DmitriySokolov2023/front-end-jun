@@ -1,5 +1,13 @@
 @import 'src/assets/styles/variables';
 
+.profile {
+	text-align: center;
+	margin-bottom: 20px;
+	> h2 {
+		text-transform: uppercase;
+	}
+}
+
 .before_after {
 	display: flex;
 	align-items: center;

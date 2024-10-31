@@ -1,27 +1,17 @@
-import { useQuery } from '@tanstack/react-query'
-import userService from '../../../services/user.service'
+import { useProfile } from '../../screens/profile/useProfile'
 import styles from './Statistics.module.scss'
 
 const Statistics = () => {
-	const profile = useQuery({
-		queryKey: ['profile'],
-		queryFn: userService.getProfile()
-	})
-	console.log(profile)
+	const { data } = useProfile()
+
 	return (
 		<div className={styles.statistics}>
-			<div>
-				<p>Minutes</p>
-				<p>20</p>
-			</div>
-			<div>
-				<p>Level</p>
-				<p>Hard</p>
-			</div>
-			<div>
-				<p>Up</p>
-				<p>5%</p>
-			</div>
+			{data?.statistics?.map(st => (
+				<div key={st.label}>
+					<p>{st.label}</p>
+					<p>{st.value}</p>
+				</div>
+			))}
 		</div>
 	)
 }

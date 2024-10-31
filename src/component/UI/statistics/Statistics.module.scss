@@ -1,7 +1,13 @@
 .statistics {
 	display: flex;
 	justify-content: space-between;
-	> div > p:first-child {
-		color: #ffffff72;
+	> div {
+		> p:first-child {
+			color: #ffffff72;
+		}
+		> p:last-child {
+			font-size: 20px;
+			font-weight: 700;
+		}
 	}
 }

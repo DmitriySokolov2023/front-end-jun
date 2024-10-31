@@ -17,12 +17,10 @@
 	background-position: center;
 
 	&.otherPage {
-		height: 280px;
+		height: 350px;
 		border-radius: 0 0 20px 20px;
 		box-shadow: $bx-accent;
-		@media (max-width: $mobile) {
-			height: 260px !important;
-		}
+		padding-bottom: 20px;
 	}
 }
 

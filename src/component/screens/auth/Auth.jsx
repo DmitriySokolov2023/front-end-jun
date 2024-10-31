@@ -47,11 +47,6 @@ const Auth = () => {
 			<Layout heading='Sign in' bgImage={'/images/auth-bg.png'} />
 
 			<div className='wrapper-inner-page'>
-				{
-					<p>
-						Type:{type} and {user?.user.email}
-					</p>
-				}
 				{isLoading && <Loader />}
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<Input
