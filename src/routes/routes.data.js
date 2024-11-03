@@ -1,5 +1,6 @@
 import Auth from '../component/screens/auth/Auth'
 import Home from '../component/screens/home/Home'
+import NewExercise from '../component/screens/new-exercise/NewExercise'
 import NewWorkout from '../component/screens/new-workout/NewWorkout'
 import Profile from '../component/screens/profile/Profile'
 export const routes = [
@@ -22,14 +23,14 @@ export const routes = [
 		path: '/profile',
 		component: Profile,
 		auth: true
-	}
-	/*{
+	},
+	{
 		path: '/new-exercise',
 
 		component: NewExercise,
-		auth: true,
-	},
-
+		auth: true
+	}
+	/*
 	{
 		path: '/workout/:id',
 

@@ -7,7 +7,7 @@ import styles from './Profile.module.scss'
 import { useProfile } from './useProfile'
 const Profile = () => {
 	const { data, isLoading } = useProfile()
-	console.log(data, isLoading)
+
 	return (
 		<>
 			<Layout heading='profile' bgImage={'/images/profile-bg.jpg'}>
