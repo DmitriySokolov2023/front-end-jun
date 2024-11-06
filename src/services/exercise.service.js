@@ -2,7 +2,7 @@ import { $axios } from '../api'
 
 class ExerciseService {
 	async getAll() {
-		return $axios.get('/exercise')
+		return $axios.get('/exercises')
 	}
 	async createExercise({ name, times, iconPath }) {
 		const { data } = $axios.post('/exercises', {
@@ -24,13 +24,9 @@ class ExerciseService {
 			throw new Error(e)
 		}
 	}
-	async deleteExercise({ name, times, iconPath }) {
+	async deleteExercise(id) {
 		try {
-			const { data } = $axios.delete(`/exercises/${id}`, {
-				name,
-				times: +times,
-				iconPath
-			})
+			const { data } = $axios.delete(`/exercises/${id}`)
 			return data
 		} catch (e) {
 			throw new Error(e)
