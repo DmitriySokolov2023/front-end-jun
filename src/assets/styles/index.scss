@@ -94,7 +94,7 @@ button {
 	transition: color 0.3s ease;
 
 	&:hover {
-		color: darken($accent, 10%);
+		color: #da369e;
 	}
 }
 .select2-selection {
@@ -130,10 +130,10 @@ button {
 
 	&__option {
 		&--is-focused {
-			background-color: darken($dark-accent, 7%) !important;
+			background-color: #946e86 !important;
 		}
 		&--is-selected {
-			background-color: darken($dark-accent, 8%) !important;
+			background-color: #946e86 !important;
 		}
 	}
 
@@ -154,7 +154,7 @@ button {
 
 	&__multi-value {
 		border-radius: 6px !important;
-		background-color: lighten($dark-accent, 10%) !important;
+		background-color: #650642 !important;
 
 		&__label {
 			color: $white !important;

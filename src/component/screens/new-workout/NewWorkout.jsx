@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import Layout from '../../layout/Layout'
+import Alert from '../../UI/alert/Alert'
 import Button from '../../UI/button/Button'
 import Input from '../../UI/input/Input'
+import Loader from '../../UI/Loader'
 import SelectExercises from './SelectExercises'
 import { useNewWorkout } from './useNewWorkout'
 
@@ -24,9 +26,9 @@ const NewWorkout = () => {
 				bgImage={'/images/new-workout-bg.jpg'}
 			></Layout>
 			<div className='wrapper-inner-page'>
-				{/* {error && <Alert type='error' text={error} />}
+				{error && <Alert type='error' text={error} />}
 				{isSuccess && <Alert text='Workout created' />}
-				{isLoading && <Loader />} */}
+				{isLoading && <Loader />}
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<Input
 						error={errors?.name?.message}

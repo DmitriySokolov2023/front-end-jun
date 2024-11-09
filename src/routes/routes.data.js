@@ -1,8 +1,11 @@
 import Auth from '../component/screens/auth/Auth'
+import ExerciseLog from '../component/screens/exercise-log/ExerciseLog'
 import Home from '../component/screens/home/Home'
 import NewExercise from '../component/screens/new-exercise/NewExercise'
 import NewWorkout from '../component/screens/new-workout/NewWorkout'
 import Profile from '../component/screens/profile/Profile'
+import Workout from '../component/screens/workouts/detail/Workout'
+import ListWorkouts from '../component/screens/workouts/list/ListWorkout'
 export const routes = [
 	{
 		path: '/',
@@ -29,24 +32,25 @@ export const routes = [
 
 		component: NewExercise,
 		auth: true
-	}
-	/*
-	{
-		path: '/workout/:id',
-
-		component: SingleWorkout,
-		auth: true,
 	},
 	{
 		path: '/workouts',
 
 		component: ListWorkouts,
-		auth: true,
+		auth: true
 	},
+
+	{
+		path: '/workout/:id',
+
+		component: Workout,
+		auth: true
+	},
+
 	{
 		path: '/exercise/:id',
 
-		component: SingleExercise,
-		auth: true,
-	}, */
+		component: ExerciseLog,
+		auth: true
+	}
 ]

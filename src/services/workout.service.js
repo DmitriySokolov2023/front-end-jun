@@ -12,7 +12,6 @@ class WorkoutService {
 			name,
 			exerciseIds
 		})
-		console.log(data)
 		return data
 	}
 	async update({ name, exerciseIds }) {

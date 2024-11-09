@@ -18,7 +18,10 @@ export const useNewWorkout = () => {
 		mutationKey: ['create workout'],
 		mutationFn: data => workoutService.create(data),
 		onSuccess: () => {
-			reset()
+			reset({
+				name: '',
+				exerciseIds: []
+			})
 		}
 	})
 
